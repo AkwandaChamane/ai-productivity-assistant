@@ -5,14 +5,19 @@ const CONSENT_KEY = "ephemeral.saveKeyConsent";
 const DRAFT_CONSENT = "ephemeral.draftsConsent";
 const BASE_URL_KEY = "ephemeral.baseUrl";
 const MODEL_KEY = "ephemeral.model";
+const PROVIDER_KEY = "ephemeral.provider";
+
+export type Provider = "lovable" | "custom";
 
 type State = {
+  provider: Provider;
   apiKey: string;
   baseUrl: string;
   model: string;
   persistKey: boolean;
   allowDrafts: boolean;
   hydrated: boolean;
+  setProvider: (p: Provider) => void;
   setApiKey: (k: string, persist: boolean) => void;
   setBaseUrl: (u: string) => void;
   setModel: (m: string) => void;
@@ -22,6 +27,7 @@ type State = {
 };
 
 export const useSession = create<State>((set, get) => ({
+  provider: "lovable",
   apiKey: "",
   baseUrl: "https://api.openai.com/v1",
   model: "gpt-4o-mini",
@@ -37,10 +43,18 @@ export const useSession = create<State>((set, get) => ({
       const baseUrl = localStorage.getItem(BASE_URL_KEY) || "https://api.openai.com/v1";
       const model = localStorage.getItem(MODEL_KEY) || "gpt-4o-mini";
       const allowDrafts = localStorage.getItem(DRAFT_CONSENT) === "1";
-      set({ apiKey: key, persistKey: persist, baseUrl, model, allowDrafts, hydrated: true });
+      const provider = (localStorage.getItem(PROVIDER_KEY) as Provider) || "lovable";
+      set({ provider, apiKey: key, persistKey: persist, baseUrl, model, allowDrafts, hydrated: true });
     } catch {
       set({ hydrated: true });
     }
+  },
+
+  setProvider: (p) => {
+    set({ provider: p });
+    try {
+      localStorage.setItem(PROVIDER_KEY, p);
+    } catch {}
   },
 
   setApiKey: (k, persist) => {
@@ -76,7 +90,6 @@ export const useSession = create<State>((set, get) => ({
       if (v) localStorage.setItem(DRAFT_CONSENT, "1");
       else {
         localStorage.removeItem(DRAFT_CONSENT);
-        // Purge any drafts
         Object.keys(localStorage)
           .filter((k) => k.startsWith("ephemeral.draft."))
           .forEach((k) => localStorage.removeItem(k));
@@ -85,7 +98,7 @@ export const useSession = create<State>((set, get) => ({
   },
 
   clearAll: () => {
-    set({ apiKey: "", persistKey: false, allowDrafts: false });
+    set({ apiKey: "", persistKey: false, allowDrafts: false, provider: "lovable" });
     try {
       Object.keys(localStorage)
         .filter((k) => k.startsWith("ephemeral."))
