@@ -24,7 +24,7 @@ export const Route = createFileRoute("/research")({
 });
 
 function ResearchTool() {
-  const { apiKey, baseUrl, model } = useSession();
+  const { provider, apiKey, baseUrl, model } = useSession();
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ function ResearchTool() {
     setOutput("");
     try {
       const text = await chatCompletion(
-        { apiKey, baseUrl, model },
+        { provider, apiKey, baseUrl, model },
         researchPrompt({ input }),
       );
       setOutput(text);

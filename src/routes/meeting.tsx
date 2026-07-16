@@ -24,7 +24,7 @@ export const Route = createFileRoute("/meeting")({
 });
 
 function MeetingTool() {
-  const { apiKey, baseUrl, model } = useSession();
+  const { provider, apiKey, baseUrl, model } = useSession();
   const [transcript, setTranscript] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ function MeetingTool() {
     setOutput("");
     try {
       const text = await chatCompletion(
-        { apiKey, baseUrl, model },
+        { provider, apiKey, baseUrl, model },
         meetingPrompt({ transcript }),
       );
       setOutput(text);
