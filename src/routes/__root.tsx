@@ -109,7 +109,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col bg-background text-foreground">
-        <header className="border-b border-border">
+        <header className="border-b border-border bg-header text-primary-foreground">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
             <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-tight">
               <span className="inline-block h-2 w-2 rounded-full bg-primary" />
