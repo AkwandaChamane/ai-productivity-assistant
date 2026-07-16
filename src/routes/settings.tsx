@@ -165,6 +165,7 @@ function SettingsPage() {
             />
           </div>
         </div>
+        </div>
       </section>
 
       <section className="space-y-3 rounded-lg border border-border bg-card p-6">
@@ -195,8 +196,8 @@ function SettingsPage() {
           inaccurate or biased — verify before acting. Actions that send outputs to external
           services occur via your direct authorization and may be stored by those services.
         </p>
-        </div>
       </section>
+
 
       <section className="space-y-3 rounded-lg border border-destructive/30 bg-card p-6">
         <h2 className="text-lg font-semibold">Clear session</h2>
