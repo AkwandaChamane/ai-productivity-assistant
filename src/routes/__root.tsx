@@ -109,17 +109,17 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col bg-background text-foreground">
-        <header className="border-b border-border">
+        <header className="border-b border-border bg-header text-primary-foreground">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
             <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-tight">
-              <span className="inline-block h-2 w-2 rounded-full bg-primary" />
+              <span className="inline-block h-2 w-2 rounded-full bg-primary-foreground" />
               Ephemeral AI
             </Link>
-            <nav className="hidden gap-4 text-sm text-muted-foreground sm:flex">
-              <Link to="/email" activeProps={{ className: "text-foreground font-medium" }}>Email</Link>
-              <Link to="/meeting" activeProps={{ className: "text-foreground font-medium" }}>Meeting</Link>
-              <Link to="/research" activeProps={{ className: "text-foreground font-medium" }}>Research</Link>
-              <Link to="/settings" activeProps={{ className: "text-foreground font-medium" }}>Settings</Link>
+            <nav className="hidden gap-4 text-sm text-primary-foreground/80 sm:flex">
+              <Link to="/email" activeProps={{ className: "text-primary-foreground font-medium" }}>Email</Link>
+              <Link to="/meeting" activeProps={{ className: "text-primary-foreground font-medium" }}>Meeting</Link>
+              <Link to="/research" activeProps={{ className: "text-primary-foreground font-medium" }}>Research</Link>
+              <Link to="/settings" activeProps={{ className: "text-primary-foreground font-medium" }}>Settings</Link>
             </nav>
             <EphemeralBadge />
           </div>
