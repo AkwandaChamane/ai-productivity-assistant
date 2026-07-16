@@ -44,6 +44,43 @@ function SettingsPage() {
 
       <section className="space-y-4 rounded-lg border border-border bg-card p-6">
         <div>
+          <h2 className="text-lg font-semibold">AI provider</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Use the built-in Lovable AI (no key needed) or bring your own OpenAI-compatible key.
+          </p>
+        </div>
+
+        <div className="grid gap-2 sm:grid-cols-2">
+          <label className={`flex cursor-pointer items-start gap-2 rounded-md border p-3 text-sm ${s.provider === "lovable" ? "border-primary bg-accent/40" : "border-input"}`}>
+            <input
+              type="radio"
+              name="provider"
+              checked={s.provider === "lovable"}
+              onChange={() => s.setProvider("lovable")}
+              className="mt-0.5"
+            />
+            <span>
+              <span className="font-medium">Built-in Lovable AI</span>
+              <span className="block text-muted-foreground">No key required. Routed through a secure server function.</span>
+            </span>
+          </label>
+          <label className={`flex cursor-pointer items-start gap-2 rounded-md border p-3 text-sm ${s.provider === "custom" ? "border-primary bg-accent/40" : "border-input"}`}>
+            <input
+              type="radio"
+              name="provider"
+              checked={s.provider === "custom"}
+              onChange={() => s.setProvider("custom")}
+              className="mt-0.5"
+            />
+            <span>
+              <span className="font-medium">My own API key</span>
+              <span className="block text-muted-foreground">Direct browser → provider. Fully ephemeral.</span>
+            </span>
+          </label>
+        </div>
+
+        <div className={s.provider === "custom" ? "" : "opacity-50 pointer-events-none"}>
+        <div>
           <h2 className="text-lg font-semibold">API key</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             Used only in this browser session. Not transmitted to our servers.
@@ -128,6 +165,7 @@ function SettingsPage() {
             />
           </div>
         </div>
+        </div>
       </section>
 
       <section className="space-y-3 rounded-lg border border-border bg-card p-6">
@@ -159,6 +197,7 @@ function SettingsPage() {
           services occur via your direct authorization and may be stored by those services.
         </p>
       </section>
+
 
       <section className="space-y-3 rounded-lg border border-destructive/30 bg-card p-6">
         <h2 className="text-lg font-semibold">Clear session</h2>

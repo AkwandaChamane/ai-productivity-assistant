@@ -24,7 +24,7 @@ export const Route = createFileRoute("/email")({
 });
 
 function EmailTool() {
-  const { apiKey, baseUrl, model } = useSession();
+  const { provider, apiKey, baseUrl, model } = useSession();
   const [form, setForm] = useState<EmailInput>({
     recipientName: "",
     purpose: "",
@@ -43,7 +43,7 @@ function EmailTool() {
     setOutput("");
     try {
       const text = await chatCompletion(
-        { apiKey, baseUrl, model },
+        { provider, apiKey, baseUrl, model },
         emailPrompt(form),
       );
       setOutput(text);
