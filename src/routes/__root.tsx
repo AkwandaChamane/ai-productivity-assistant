@@ -115,11 +115,11 @@ function RootComponent() {
               <span className="inline-block h-2 w-2 rounded-full bg-primary" />
               Ephemeral AI
             </Link>
-            <nav className="hidden gap-4 text-sm text-muted-foreground sm:flex">
-              <Link to="/email" activeProps={{ className: "text-foreground font-medium" }}>Email</Link>
-              <Link to="/meeting" activeProps={{ className: "text-foreground font-medium" }}>Meeting</Link>
-              <Link to="/research" activeProps={{ className: "text-foreground font-medium" }}>Research</Link>
-              <Link to="/settings" activeProps={{ className: "text-foreground font-medium" }}>Settings</Link>
+            <nav className="hidden gap-4 text-sm text-primary-foreground/80 sm:flex">
+              <Link to="/email" activeProps={{ className: "text-primary-foreground font-medium" }}>Email</Link>
+              <Link to="/meeting" activeProps={{ className: "text-primary-foreground font-medium" }}>Meeting</Link>
+              <Link to="/research" activeProps={{ className: "text-primary-foreground font-medium" }}>Research</Link>
+              <Link to="/settings" activeProps={{ className: "text-primary-foreground font-medium" }}>Settings</Link>
             </nav>
             <EphemeralBadge />
           </div>
