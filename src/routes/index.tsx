@@ -47,13 +47,13 @@ function Index() {
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
             to="/email"
-            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Try the email generator
           </Link>
           <Link
             to="/settings"
-            className="rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent"
+            className="rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Settings & API key
           </Link>
@@ -65,9 +65,9 @@ function Index() {
           <Link
             key={t.to}
             to={t.to}
-            className="group rounded-lg border border-border bg-card p-5 transition-colors hover:border-baby-blue/50 focus:border-baby-blue/50"
+            className="group rounded-lg border border-border bg-card p-5 transition-colors hover:border-baby-blue/50 focus-visible:border-baby-blue/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <h2 className="text-base font-semibold group-hover:text-baby-blue group-focus:text-baby-blue">{t.title}</h2>
+            <h2 className="text-base font-semibold group-hover:text-baby-blue group-focus-visible:text-baby-blue">{t.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
           </Link>
         ))}

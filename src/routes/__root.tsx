@@ -111,11 +111,11 @@ function RootComponent() {
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <header className="border-b border-border bg-header text-primary-foreground">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
-            <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-tight hover:text-baby-red focus:text-baby-red">
+            <Link to="/" className="flex items-center gap-2 rounded-sm text-sm font-semibold tracking-tight hover:text-baby-red focus-visible:text-baby-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-baby-red focus-visible:ring-offset-2 focus-visible:ring-offset-header">
               <span className="inline-block h-2 w-2 rounded-full bg-primary-foreground" />
               Ephemeral AI
             </Link>
-            <nav className="hidden gap-4 text-sm text-primary-foreground/80 sm:flex [&_a]:hover:text-baby-red [&_a]:focus:text-baby-red">
+            <nav className="hidden gap-4 text-sm text-primary-foreground/80 sm:flex [&_a]:rounded-sm [&_a]:hover:text-baby-red [&_a]:focus-visible:text-baby-red [&_a]:focus-visible:outline-none [&_a]:focus-visible:ring-2 [&_a]:focus-visible:ring-baby-red [&_a]:focus-visible:ring-offset-2 [&_a]:focus-visible:ring-offset-header">
               <Link to="/email" activeProps={{ className: "text-baby-red font-medium" }}>Email</Link>
               <Link to="/meeting" activeProps={{ className: "text-baby-red font-medium" }}>Meeting</Link>
               <Link to="/research" activeProps={{ className: "text-baby-red font-medium" }}>Research</Link>
