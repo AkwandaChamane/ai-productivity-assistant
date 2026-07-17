@@ -26,19 +26,19 @@ export function OutputActions({
           setCopied(true);
           setTimeout(() => setCopied(false), 1500);
         }}
-        className="rounded-md border border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent"
+        className="rounded-md border border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         {copied ? "Copied" : "Copy"}
       </button>
       <button
         onClick={() => downloadMarkdown(`${filenameBase}.md`, content)}
-        className="rounded-md border border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent"
+        className="rounded-md border border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         Download MD
       </button>
       <button
         onClick={() => downloadPdf(`${filenameBase}.pdf`, content)}
-        className="rounded-md border border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent"
+        className="rounded-md border border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         Download PDF
       </button>
@@ -49,7 +49,7 @@ export function OutputActions({
             setSaved(true);
             setTimeout(() => setSaved(false), 1500);
           }}
-          className="rounded-md border border-dashed border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent"
+          className="rounded-md border border-dashed border-input bg-background px-3 py-1.5 text-sm font-medium hover:bg-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           {saved ? "Saved locally" : "Save local draft"}
         </button>
