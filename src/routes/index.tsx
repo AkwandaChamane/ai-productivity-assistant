@@ -65,9 +65,9 @@ function Index() {
           <Link
             key={t.to}
             to={t.to}
-            className="group rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/50"
+            className="group rounded-lg border border-border bg-card p-5 transition-colors hover:border-baby-blue/50 focus:border-baby-blue/50"
           >
-            <h2 className="text-base font-semibold group-hover:text-primary">{t.title}</h2>
+            <h2 className="text-base font-semibold group-hover:text-baby-blue group-focus:text-baby-blue">{t.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
           </Link>
         ))}
