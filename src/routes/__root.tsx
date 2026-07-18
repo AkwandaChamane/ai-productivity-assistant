@@ -63,20 +63,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ephemeral AI — Client-side email, meeting & research assistant" },
+      { title: "Ephemeral AI — Private, in-browser AI tools" },
       {
         name: "description",
         content:
-          "Privacy-first AI tools that run entirely in your browser. No accounts, no server logs. Bring your own API key.",
+          "Three focused AI tools that run in your browser: email generator, meeting notes summarizer, research assistant. No accounts, no server storage.",
       },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Ephemeral AI Assistant" },
+      { property: "og:title", content: "Ephemeral AI — Private, in-browser AI tools" },
       {
         property: "og:description",
-        content: "Client-side AI email, meeting notes, and research tools. No accounts, no logs.",
+        content: "Three focused AI tools that run in your browser: email generator, meeting notes summarizer, research assistant. No accounts, no server storage.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ephemeral AI — Private, in-browser AI tools" },
+      { name: "twitter:description", content: "Three focused AI tools that run in your browser: email generator, meeting notes summarizer, research assistant. No accounts, no server storage." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/21590a8a-d995-44dc-848b-00eafe4d00d8/id-preview-4c081b95--cdff49da-20c4-4ab7-a0d9-dc3ce61b948d.lovable.app-1784373957353.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/21590a8a-d995-44dc-848b-00eafe4d00d8/id-preview-4c081b95--cdff49da-20c4-4ab7-a0d9-dc3ce61b948d.lovable.app-1784373957353.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
