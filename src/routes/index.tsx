@@ -65,9 +65,9 @@ function Index() {
           <Link
             key={t.to}
             to={t.to}
-            className="group rounded-lg border border-border bg-card p-5 transition-colors hover:border-baby-blue/50 focus-visible:border-baby-blue/50 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="group rounded-lg border border-border bg-card p-5 transition-colors duration-200 hover:border-baby-blue/50 focus-visible:border-baby-blue/50 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <h2 className="text-base font-semibold group-hover:text-baby-blue group-focus-visible:text-baby-blue">{t.title}</h2>
+            <h2 className="text-base font-semibold transition-colors duration-200 group-hover:text-baby-blue group-focus-visible:text-baby-blue">{t.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
           </Link>
         ))}
