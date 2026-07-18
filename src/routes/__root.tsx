@@ -111,7 +111,7 @@ function RootComponent() {
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <header className="border-b border-border bg-header text-primary-foreground">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
-            <Link to="/" className="flex items-center gap-2 rounded-sm text-sm font-semibold tracking-tight hover:text-baby-red focus-visible:text-baby-red focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-red focus-visible:ring-offset-2 focus-visible:ring-offset-header">
+            <Link to="/" className="flex items-center gap-2 rounded-sm text-sm font-semibold tracking-tight transition-colors duration-200 hover:text-baby-red focus-visible:text-baby-red focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-baby-red focus-visible:ring-offset-2 focus-visible:ring-offset-header">
               <span className="inline-block h-2 w-2 rounded-full bg-primary-foreground" />
               Ephemeral AI
             </Link>
