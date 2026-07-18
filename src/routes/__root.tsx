@@ -115,11 +115,11 @@ function RootComponent() {
               <span className="inline-block h-2 w-2 rounded-full bg-primary-foreground" />
               Ephemeral AI
             </Link>
-            <nav className="hidden gap-4 text-sm text-primary-foreground/80 sm:flex [&_a]:rounded-sm [&_a]:hover:text-baby-red [&_a]:focus-visible:text-baby-red [&_a]:focus-visible:outline-none [&_a]:focus-visible:ring-3 [&_a]:focus-visible:ring-baby-red [&_a]:focus-visible:ring-offset-2 [&_a]:focus-visible:ring-offset-header">
-              <Link to="/email" activeProps={{ className: "text-baby-red font-medium" }}>Email</Link>
-              <Link to="/meeting" activeProps={{ className: "text-baby-red font-medium" }}>Meeting</Link>
-              <Link to="/research" activeProps={{ className: "text-baby-red font-medium" }}>Research</Link>
-              <Link to="/settings" activeProps={{ className: "text-baby-red font-medium" }}>Settings</Link>
+            <nav className="hidden gap-4 text-sm text-primary-foreground/80 sm:flex [&_a]:rounded-sm [&_a]:transition-colors [&_a]:duration-200 [&_a]:hover:text-baby-red [&_a]:focus-visible:text-baby-red [&_a]:focus-visible:outline-none [&_a]:focus-visible:ring-3 [&_a]:focus-visible:ring-baby-red [&_a]:focus-visible:ring-offset-2 [&_a]:focus-visible:ring-offset-header">
+              <Link to="/email" activeProps={{ className: "text-baby-red font-medium transition-colors duration-200" }}>Email</Link>
+              <Link to="/meeting" activeProps={{ className: "text-baby-red font-medium transition-colors duration-200" }}>Meeting</Link>
+              <Link to="/research" activeProps={{ className: "text-baby-red font-medium transition-colors duration-200" }}>Research</Link>
+              <Link to="/settings" activeProps={{ className: "text-baby-red font-medium transition-colors duration-200" }}>Settings</Link>
             </nav>
             <EphemeralBadge />
           </div>
